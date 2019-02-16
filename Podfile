@@ -12,7 +12,6 @@ target 'Flash Chat' do
   pod 'SVProgressHUD'
   pod 'ChameleonFramework'
 
-
 end
 
 post_install do |installer|

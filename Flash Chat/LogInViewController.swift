@@ -6,6 +6,7 @@
 
 
 import UIKit
+import Firebase
 
 
 class LogInViewController: UIViewController {
@@ -16,6 +17,13 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        
+    }
+    // this clears the input field upon returning back from perform segue call function
+    override func viewWillAppear(_ animated: Bool) {
+        emailTextfield.text = "";
+        passwordTextfield.text = "";
         
     }
 
@@ -28,6 +36,19 @@ class LogInViewController: UIViewController {
 
         
         //TODO: Log in the user
+        
+        Auth.auth().signIn(withEmail: emailTextfield.text!, password:  passwordTextfield.text!) { (user, error) in
+            if error != nil {
+                print("======== ERROR ==========")
+                print("theres an error", error!)
+            } else {
+                print("======== SUCCESS ==========")
+                print("signin! ", user!)
+                // perform a segue takes the user to the homepage
+                self.performSegue(withIdentifier: "goToChat", sender: self)
+            }
+        }
+        
         
         
     }

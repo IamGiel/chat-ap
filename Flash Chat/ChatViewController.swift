@@ -64,7 +64,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // step two: create the cell using the method dequeueReusableCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
-        let messageArray = ["First Message", "Second Message", "Third Message"];
+        let messageArray = ["First Message", "Second Message sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsd", "Third Message"];
         cell.messageBody.text = messageArray[indexPath.row];
         return cell;
     }

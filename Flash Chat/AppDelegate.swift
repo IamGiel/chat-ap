@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myDB = Database.database().reference()
         print("this is my DB = ",myDB)
         
-        myDB.setValue("Hello Database!")
-        myDatabase =  String("\(myDB.setValue("Hello Database!"))");
+//        myDB.setValue("Hello Database!")
+//        myDatabase =  String("\(myDB.setValue("Hello Database!"))");
         return true
     }
     
